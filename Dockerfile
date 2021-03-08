@@ -1,4 +1,4 @@
-FROM nginx:1.13
+FROM nginx:1.19
 
 # Install openssh-server to provide web ssh access from kudu, supervisor to run processor
 RUN apt-get update \
