@@ -65,5 +65,4 @@ EXPOSE 2222
 
 WORKDIR /srv
 
-CMD ["/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_config"]
-CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+CMD ["sh", "/bin/init_container.sh"]
