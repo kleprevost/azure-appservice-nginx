@@ -24,6 +24,8 @@ COPY init_container.sh /bin/
 
 COPY sirtunnel.py /bin/
 
+COPY config.json /bin/
+
 RUN set -eux; \
 	apkArch="$(apk --print-arch)"; \
 	case "$apkArch" in \
