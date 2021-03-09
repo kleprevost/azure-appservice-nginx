@@ -16,5 +16,3 @@ EXPOSE 443
 EXPOSE 2019
 
 WORKDIR /srv
-
-CMD ["/bin/init_container.sh"]
