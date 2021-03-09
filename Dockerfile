@@ -22,6 +22,8 @@ COPY sshd_config /etc/ssh/
 
 COPY init_container.sh /bin/
 
+COPY sirtunnel.py /bin/
+
 RUN set -eux; \
 	apkArch="$(apk --print-arch)"; \
 	case "$apkArch" in \
