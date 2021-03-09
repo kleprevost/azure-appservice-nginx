@@ -7,6 +7,14 @@ RUN apk add openssh \
 COPY sshd_config /etc/ssh/
 COPY init_container.sh /bin/
 
-EXPOSE 80 2222
-CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+ENV XDG_CONFIG_HOME /config
+ENV XDG_DATA_HOME /data
+
+EXPOSE 2222
+EXPOSE 80
+EXPOSE 443
+EXPOSE 2019
+
+WORKDIR /srv
+
 CMD ["/bin/init_container.sh"]
