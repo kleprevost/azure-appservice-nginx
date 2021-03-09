@@ -5,6 +5,7 @@ RUN apk add openssh \
      && echo "root:Docker!" | chpasswd 
 
 COPY sshd_config /etc/ssh/
+COPY init_container.sh /bin/
 
 EXPOSE 80 2222
 CMD ["/bin/init_container.sh"]
