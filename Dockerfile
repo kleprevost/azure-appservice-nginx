@@ -20,6 +20,8 @@ ENV CADDY_VERSION v2.2.1
 
 COPY sshd_config /etc/ssh/
 
+COPY init_container.sh /bin/
+
 RUN set -eux; \
 	apkArch="$(apk --print-arch)"; \
 	case "$apkArch" in \
